@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mike Placido - Software Developer Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .section {
+            scroll-margin-top: 64px;
+            /* Adjust for sticky header height */
+        }
+
+        /* Custom CSS for Carousel Transitions */
+        .carousel-item {
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .hidden-slide {
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-900 text-gray-200">
+
+    <header class="bg-gray-900/80 backdrop-blur-md sticky top-0 z-50">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-2xl font-bold text-white">Mike Placido</a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#about"
+                            class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">About</a>
+                        <a href="#projects"
+                            class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Projects</a>
+                        <a href="#skills"
+                            class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Skills</a>
+                        <a href="#experience"
+                            class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Experience</a>
+                        <a href="#education"
+                            class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Education</a>
+                        <a href="#contact"
+                            class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                    </div>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button"
+                        class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                        aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <i data-lucide="menu" class="block h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <div id="mobile-menu" class="md:hidden hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#about"
+                    class="mobile-menu-link text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">About</a>
+                <a href="#projects"
+                    class="mobile-menu-link text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Projects</a>
+                <a href="#skills"
+                    class="mobile-menu-link text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Skills</a>
+                <a href="#experience"
+                    class="mobile-menu-link text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Experience</a>
+                <a href="#education"
+                    class="mobile-menu-link text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+        <section id="hero" class="text-center py-20">
+            <img src="https://placehold.co/128x128/334155/e2e8f0?text=MP" alt="Mike Placido"
+                class="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-gray-700">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-white">Mike Placido: From Leadership to Code</h1>
+            <p class="mt-4 text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto">
+                Leveraging two decades of leadership and problem-solving in high-pressure environments,
+                I'm now building robust solutions as an aspiring Software Developer.
+            </p>
+            <div class="mt-8 flex justify-center space-x-4">
+                <a href="#projects"
+                    class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-md transition duration-300">View
+                    My Work</a>
+                <a href="#contact"
+                    class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-3 px-6 rounded-md transition duration-300">Get
+                    In Touch</a>
+            </div>
+        </section>
+
+        <section id="about" class="section py-20">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl sm:text-4xl font-bold text-white mb-8 text-center">Bio</h2>
+                <div id="bio-content" class="bg-gray-800 p-8 rounded-lg shadow-lg">
+                    <p class="text-gray-300 leading-relaxed">
+                        Experienced, detail-oriented professional chef with 20 years of leadership in dynamic,
+                        high-pressure environments. Keenly moving into the technology sector. Ability to optimize
+                        processes, create systems and manage complex operations, while leading small teams.
+                    </p>
+                    <p class="text-gray-300 leading-relaxed mt-4">
+                        Currently acquiring foundational programming experience from solving technical challenges.
+                        Seeking a challenging tech apprenticeship to apply a methodical approach, strong problem-solving
+                        capabilities, and a relish for learning to contribute effectively to an innovative IT team.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section py-20">
+            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-8 text-center">My Projects</h2>
+            <div class="max-w-5xl mx-auto relative">
+                <div id="project-carousel" class="relative overflow-hidden rounded-lg shadow-xl bg-gray-800">
+                    <div id="carousel-inner" class="flex transition-transform duration-500 ease-in-out mb-4">
+
+
+                        <div class="carousel-item flex-shrink-0 w-full p-6 lg:p-8 lg:px-24">
+                            <div class="flex flex-col lg:flex-row gap-6 lg:gap-8 items-center">
+                                <div class="lg:w-1/2">
+                                    <img src="images/diceRoller.png" alt="Dice Roller Project Screenshot"
+                                        class="rounded-lg object-contain w-80 h-80">
+                                </div>
+                                <div class="lg:w-1/2 text-center lg:text-left">
+                                    <h3 class="text-2xl font-bold text-white mb-3">Dice Roller</h3>
+                                    <p class="text-gray-300 mb-4">
+                                        A simple web-based Dice Roller application demonstrating JavaScript and
+                                        graphing with Chart.js.
+                                    </p>
+                                    <div class="flex flex-wrap justify-center lg:justify-start gap-2 mb-4">
+                                        <span
+                                            class="bg-indigo-600 text-white text-xs font-semibold px-2.5 py-0.5 rounded">HTML</span>
+                                        <span
+                                            class="bg-indigo-600 text-white text-xs font-semibold px-2.5 py-0.5 rounded">CSS</span>
+                                        <span
+                                            class="bg-indigo-600 text-white text-xs font-semibold px-2.5 py-0.5 rounded">JavaScript</span>
+                                        <span
+                                            class="bg-indigo-600 text-white text-xs font-semibold px-2.5 py-0.5 rounded">Chart.js</span>
+                                    </div>
+                                    <div class="flex justify-center lg:justify-start gap-4">
+                                        <a href="https://github.com/mikeplacido/diceRoller" target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="inline-flex items-center text-indigo-400 hover:text-indigo-300 font-medium">
+                                            <i data-lucide="github" class="w-5 h-5 mr-1"></i> GitHub
+                                        </a>
+                                        <a href="https://diceroller-rycy.onrender.com/" target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="inline-flex items-center text-indigo-400 hover:text-indigo-300 font-medium">
+                                            <i data-lucide="globe" class="w-5 h-5 mr-2"></i> Live Demo
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item flex-shrink-0 w-full p-6 lg:p-8 hidden-slide lg:px-24">
+                            <div class="flex flex-col lg:flex-row gap-6 lg:gap-8 items-center">
+                                <div class="lg:w-1/2">
+                                    <img src="images/recipeDB.png" alt="Recipe Database Project Screenshot"
+                                        class="rounded-lg object-contain w-80 h-80">
+                                </div>
+                                <div class=" lg:w-1/2 text-center lg:text-left">
+                                    <h3 class="text-2xl font-bold text-white mb-3">RecipeDB</h3>
+                                    <p class="text-gray-300 mb-4">
+                                        A basic recipe database application built with Node.js and Express,
+                                        showcasing RESTful API principles and SQLite for data storage.
+                                    </p>
+                                    <div class="flex flex-wrap justify-center lg:justify-start gap-2 mb-4">
+                                        <span
+                                            class="bg-indigo-600 text-white text-xs font-semibold px-2.5 py-0.5 rounded">HTML</span>
+                                        <span
+                                            class="bg-indigo-600 text-white text-xs font-semibold px-2.5 py-0.5 rounded">CSS</span>
+                                        <span
+                                            class="bg-indigo-600 text-white text-xs font-semibold px-2.5 py-0.5 rounded">JavaScript</span>
+                                        <span
+                                            class="bg-indigo-600 text-white text-xs font-semibold px-2.5 py-0.5 rounded">Node.js</span>
+                                        <span
+                                            class="bg-indigo-600 text-white text-xs font-semibold px-2.5 py-0.5 rounded">Express</span>
+                                        <span
+                                            class="bg-indigo-600 text-white text-xs font-semibold px-2.5 py-0.5 rounded">SQLite</span>
+                                    </div>
+                                    <div class="flex justify-center lg:justify-start gap-4">
+                                        <a href="https://github.com/mikeplacido/recipeDB2" target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="inline-flex items-center text-indigo-400 hover:text-indigo-300 font-medium">
+                                            <i data-lucide="github" class="w-5 h-5 mr-1"></i> GitHub
+                                        </a>
+                                        <a href="https://recipedb-4s90.onrender.com/" target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="inline-flex items-center text-indigo-400 hover:text-indigo-300 font-medium">
+                                            <i data-lucide="globe" class="w-5 h-5 mr-2"></i> Live Demo
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <button id="prev-project"
+                        class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-700 p-2 rounded-full text-white hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 z-10">
+                        <i data-lucide="chevron-left" class="w-6 h-6"></i>
+                    </button>
+                    <button id="next-project"
+                        class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-gray-700 p-2 rounded-full text-white hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 z-10">
+                        <i data-lucide="chevron-right" class="w-6 h-6"></i>
+                    </button>
+
+                    <div id="carousel-indicators"
+                        class="absolute bottom-2 left-0 right-0 flex justify-center space-x-2">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="skills" class="section py-20">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl sm:text-4xl font-bold text-white mb-12 text-center">Technical Skills</h2>
+                <div id="skills-list" class="flex flex-wrap justify-center gap-4 text-sm">
+                    <span class="skill-item bg-gray-800 py-2 px-4 rounded-md flex items-center gap-2"><i
+                            data-lucide="code-2" class="w-5 h-5 text-indigo-400"></i><span>Python</span></span>
+                    <span class="skill-item bg-gray-800 py-2 px-4 rounded-md flex items-center gap-2"><i
+                            data-lucide="code-2" class="w-5 h-5 text-indigo-400"></i><span>C#</span></span>
+                    <span class="skill-item bg-gray-800 py-2 px-4 rounded-md flex items-center gap-2"><i
+                            data-lucide="file-code" class="w-5 h-5 text-indigo-400"></i><span>HTML & CSS</span></span>
+                    <span class="skill-item bg-gray-800 py-2 px-4 rounded-md flex items-center gap-2"><i
+                            data-lucide="file-code" class="w-5 h-5 text-indigo-400"></i><span>JavaScript</span></span>
+                    <span class="skill-item bg-gray-800 py-2 px-4 rounded-md flex items-center gap-2"><i
+                            data-lucide="server" class="w-5 h-5 text-indigo-400"></i><span>Node.js &
+                            Express</span></span>
+                    <span class="skill-item bg-gray-800 py-2 px-4 rounded-md flex items-center gap-2"><i
+                            data-lucide="database" class="w-5 h-5 text-indigo-400"></i><span>SQLite</span></span>
+                    <span class="skill-item bg-gray-800 py-2 px-4 rounded-md flex items-center gap-2"><i
+                            data-lucide="git-branch" class="w-5 h-5 text-indigo-400"></i><span>Git</span></span>
+                    <span class="skill-item bg-gray-800 py-2 px-4 rounded-md flex items-center gap-2"><i
+                            data-lucide="monitor-smartphone" class="w-5 h-5 text-indigo-400"></i><span>Windows, Linux,
+                            iOS, Android</span></span>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="section py-20">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl sm:text-4xl font-bold text-white mb-12 text-center">Experience</h2>
+                <div class="bg-gray-800 p-8 rounded-lg shadow-lg flex flex-col md:flex-row gap-8 items-center mb-12">
+                    <div class="relative w-full md:w-auto md:mr-8" style="max-width: 280px;">
+
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-indigo-400 mb-4">From the Kitchen to the Keyboard: A Chef's
+                            Journey</h3>
+                        <p class="text-gray-300 mb-4">
+                            For over a decade, my world was the heat of the kitchen, the thrill of a busy service, and
+                            the joy of creating something exceptional from scratch. As a chef, I've led teams in
+                            fast-paced environments like the award-winning Adare Manor and developed new culinary
+                            concepts for the Bakestone Group.
+                        </p>
+                        <p class="text-gray-300 mb-4">
+                            My experience as a Head Chef and Development Chef taught me more than just how to cook; it
+                            taught me how to lead, how to innovate under pressure, and how to manage complex projects
+                            from concept to completion. The precision required to perfect a recipe is not so different
+                            from the logic needed to write clean code. The creativity of designing a new menu mirrors
+                            the innovation required to build a new application.
+                        </p>
+                        <p class="text-gray-300">
+                            Now, I am channeling that same passion, discipline, and creative energy into a new craft:
+                            software development. I am excited to bring my unique perspective and a well-honed set of
+                            transferable skills to an entry-level position or apprenticeship where I can continue to
+                            learn and grow.
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-gray-800 p-8 rounded-lg shadow-lg">
+                    <h4 class="text-xl font-bold text-white mb-6">Career Summary</h4>
+                    <ul class="space-y-4">
+                        <li>
+                            <span class="block text-indigo-400 font-semibold">April 2024 - July 2024</span>
+                            <span class="block text-gray-200">Naturally Nourished, Mahon Point</span>
+                            <span class="block text-gray-400">Head Chef</span>
+                        </li>
+                        <li>
+                            <span class="block text-indigo-400 font-semibold">April 2022 - April 2024</span>
+                            <span class="block text-gray-200">Bakestone Cafe, Carrigtwohill / White Horse,
+                                Ballincollig</span>
+                            <span class="block text-gray-400">Event & Development Chef / Sous Chef</span>
+                        </li>
+                        <li>
+                            <span class="block text-indigo-400 font-semibold">May 2021 - March 2022</span>
+                            <span class="block text-gray-200">Liberty Grill, Cork</span>
+                            <span class="block text-gray-400">Sous Chef</span>
+                        </li>
+                        <li>
+                            <span class="block text-indigo-400 font-semibold">December 2020 - May 2021</span>
+                            <span class="block text-gray-200">Perry Street, Cork</span>
+                            <span class="block text-gray-400">Sous Chef</span>
+                        </li>
+                        <li>
+                            <span class="block text-indigo-400 font-semibold">May 2018 - November 2020</span>
+                            <span class="block text-gray-200">O’Looney’s Bar & Restaurant, Lahinch</span>
+                            <span class="block text-gray-400">Head Chef</span>
+                        </li>
+                        <li>
+                            <span class="block text-indigo-400 font-semibold">February 2016 - May 2018</span>
+                            <span class="block text-gray-200">Bakestone Cafe, Carrigtwohill</span>
+                            <span class="block text-gray-400">Sous Chef</span>
+                        </li>
+                        <li>
+                            <span class="block text-indigo-400 font-semibold">August 2009 - January 2016</span>
+                            <span class="block text-gray-200">Adare Manor Hotel, Adare</span>
+                            <span class="block text-gray-400">Senior Chef de Partie</span>
+                        </li>
+                    </ul>
+                </div>
+        </section>
+
+        <section id="education" class="section py-20">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl sm:text-4xl font-bold text-white mb-12 text-center">Education & Training</h2>
+                <div class="space-y-8">
+                    <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-bold text-white">Intermediate Software Development</h3>
+                        <p class="text-indigo-400 mb-2">CMETB | Feb 2025 - Present</p>
+                        <p class="text-gray-300">C#, Java, HTML, CSS, Javascript, Python, and SQLite.</p>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-bold text-white">Introductory / Advanced Course in Programming - Python
+                        </h3>
+                        <p class="text-indigo-400 mb-2">University of Helsinki | Mar 2025 - Jan 2026</p>
+                        <p class="text-gray-300">Studying fundamental programming concepts, data structures, algorithms,
+                            and OOP in Python.</p>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-bold text-white">Military Leadership & Officer Training</h3>
+                        <p class="text-indigo-400 mb-2">Royal Military Academy Sandhurst & 1st Btn Royal Highland
+                            Fusiliers | 1999 - 2000</p>
+                        <p class="text-gray-300">Developed skills in leadership, discipline, problem-solving, and
+                            communication under pressure.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script>
+            // --- Standard Page Interactivity ---
+
+            // Lucide Icons
+            lucide.createIcons();
+
+            // Mobile menu toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
+
+            mobileMenuButton.addEventListener('click', () => {
+                const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+                mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
+                mobileMenu.classList.toggle('hidden');
+                const icon = mobileMenuButton.querySelector('i');
+                icon.setAttribute('data-lucide', mobileMenu.classList.contains('hidden') ? 'menu' : 'x');
+                lucide.createIcons();
+            });
+
+            mobileMenuLinks.forEach(anchor => {
+                anchor.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenuButton.setAttribute('aria-expanded', 'false');
+                    mobileMenuButton.querySelector('i').setAttribute('data-lucide', 'menu');
+                    lucide.createIcons();
+                });
+            });
+
+            // --- Project Carousel Functionality ---
+            const carousel = document.getElementById('project-carousel');
+            const carouselInner = document.getElementById('carousel-inner');
+            const carouselItems = carouselInner.querySelectorAll('.carousel-item');
+            const prevBtn = document.getElementById('prev-project');
+            const nextBtn = document.getElementById('next-project');
+            const indicatorsContainer = document.getElementById('carousel-indicators');
+
+            let currentIndex = 0;
+
+            // Create indicators
+            carouselItems.forEach((_, idx) => {
+                const indicator = document.createElement('button');
+                indicator.className = 'w-3 h-3 rounded-full bg-gray-500 focus:outline-none' + (idx === 0 ? ' bg-indigo-500' : '');
+                indicator.setAttribute('aria-label', `Go to slide ${idx + 1}`);
+                indicator.addEventListener('click', () => showSlide(idx));
+                indicatorsContainer.appendChild(indicator);
+            });
+
+            function updateIndicators() {
+                indicatorsContainer.querySelectorAll('button').forEach((btn, idx) => {
+                    btn.classList.toggle('bg-indigo-500', idx === currentIndex);
+                    btn.classList.toggle('bg-gray-500', idx !== currentIndex);
+                });
+            }
+
+            function showSlide(index) {
+                carouselItems.forEach((item, idx) => {
+                    item.classList.toggle('hidden-slide', idx !== index);
+                });
+                currentIndex = index;
+                updateIndicators();
+                lucide.createIcons();
+            }
+
+            prevBtn.addEventListener('click', () => {
+                let newIndex = (currentIndex - 1 + carouselItems.length) % carouselItems.length;
+                showSlide(newIndex);
+            });
+
+            nextBtn.addEventListener('click', () => {
+                let newIndex = (currentIndex + 1) % carouselItems.length;
+                showSlide(newIndex);
+            });
+
+
+        </script>
+</body>
+
+</html>
