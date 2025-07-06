@@ -8,6 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -18,7 +19,7 @@
             /* Adjust for sticky header height */
         }
 
-        /* Custom CSS for Carousel Transitions */
+        /* Custom CSS for Carousel Transitions (unchanged, as Tailwind doesn't cover this) */
         .carousel-item {
             transition: transform 0.5s ease-in-out;
         }
@@ -30,7 +31,6 @@
 </head>
 
 <body class="bg-gray-900 text-gray-200">
-
     <header class="bg-gray-900/80 backdrop-blur-md sticky top-0 z-50">
         <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
@@ -74,20 +74,21 @@
                 <a href="#experience"
                     class="mobile-menu-link text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Experience</a>
                 <a href="#education"
+                    class="mobile-menu-link text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Education</a>
+                <a href="#contact"
                     class="mobile-menu-link text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contact</a>
             </div>
         </div>
     </header>
 
     <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-
         <section id="hero" class="text-center py-20">
             <img src="https://placehold.co/128x128/334155/e2e8f0?text=MP" alt="Mike Placido"
                 class="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-gray-700">
             <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-white">Mike Placido: From Leadership to Code</h1>
             <p class="mt-4 text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto">
-                Leveraging two decades of leadership and problem-solving in high-pressure environments,
-                I'm now building robust solutions as an aspiring Software Developer.
+                Leveraging two decades of leadership and problem-solving in high-pressure environments, I'm now building
+                robust solutions as an aspiring Software Developer.
             </p>
             <div class="mt-8 flex justify-center space-x-4">
                 <a href="#projects"
@@ -104,15 +105,12 @@
                 <h2 class="text-3xl sm:text-4xl font-bold text-white mb-8 text-center">Bio</h2>
                 <div id="bio-content" class="bg-gray-800 p-8 rounded-lg shadow-lg">
                     <p class="text-gray-300 leading-relaxed">
-                        Experienced, detail-oriented professional chef with 20 years of leadership in dynamic,
-                        high-pressure environments. Keenly moving into the technology sector. Ability to optimize
-                        processes, create systems and manage complex operations, while leading small teams.
+                        I’m Mike Placido, a former chef with two decades of leadership experience, now transitioning
+                        into software development. My journey from high-pressure kitchens to coding reflects my passion
+                        for solving complex challenges and creating innovative solutions. Explore my projects and
+                        experience to see how I’m applying my skills in tech.
                     </p>
-                    <p class="text-gray-300 leading-relaxed mt-4">
-                        Currently acquiring foundational programming experience from solving technical challenges.
-                        Seeking a challenging tech apprenticeship to apply a methodical approach, strong problem-solving
-                        capabilities, and a relish for learning to contribute effectively to an innovative IT team.
-                    </p>
+
                 </div>
             </div>
         </section>
@@ -122,8 +120,6 @@
             <div class="max-w-5xl mx-auto relative">
                 <div id="project-carousel" class="relative overflow-hidden rounded-lg shadow-xl bg-gray-800">
                     <div id="carousel-inner" class="flex transition-transform duration-500 ease-in-out mb-4">
-
-
                         <div class="carousel-item flex-shrink-0 w-full p-6 lg:p-8 lg:px-24">
                             <div class="flex flex-col lg:flex-row gap-6 lg:gap-8 items-center">
                                 <div class="lg:w-1/2">
@@ -133,8 +129,8 @@
                                 <div class="lg:w-1/2 text-center lg:text-left">
                                     <h3 class="text-2xl font-bold text-white mb-3">Dice Roller</h3>
                                     <p class="text-gray-300 mb-4">
-                                        A simple web-based Dice Roller application demonstrating JavaScript and
-                                        graphing with Chart.js.
+                                        A simple web-based Dice Roller application demonstrating JavaScript and graphing
+                                        with Chart.js.
                                     </p>
                                     <div class="flex flex-wrap justify-center lg:justify-start gap-2 mb-4">
                                         <span
@@ -161,18 +157,17 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="carousel-item flex-shrink-0 w-full p-6 lg:p-8 hidden-slide lg:px-24">
                             <div class="flex flex-col lg:flex-row gap-6 lg:gap-8 items-center">
                                 <div class="lg:w-1/2">
                                     <img src="images/recipeDB.png" alt="Recipe Database Project Screenshot"
                                         class="rounded-lg object-contain w-80 h-80">
                                 </div>
-                                <div class=" lg:w-1/2 text-center lg:text-left">
+                                <div class="lg:w-1/2 text-center lg:text-left">
                                     <h3 class="text-2xl font-bold text-white mb-3">RecipeDB</h3>
                                     <p class="text-gray-300 mb-4">
-                                        A basic recipe database application built with Node.js and Express,
-                                        showcasing RESTful API principles and SQLite for data storage.
+                                        A basic recipe database application built with Node.js and Express, showcasing
+                                        RESTful API principles and SQLite for data storage.
                                     </p>
                                     <div class="flex flex-wrap justify-center lg:justify-start gap-2 mb-4">
                                         <span
@@ -203,9 +198,7 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
-
                     <button id="prev-project"
                         class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-700 p-2 rounded-full text-white hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 z-10">
                         <i data-lucide="chevron-left" class="w-6 h-6"></i>
@@ -214,14 +207,11 @@
                         class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-gray-700 p-2 rounded-full text-white hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 z-10">
                         <i data-lucide="chevron-right" class="w-6 h-6"></i>
                     </button>
-
                     <div id="carousel-indicators"
-                        class="absolute bottom-2 left-0 right-0 flex justify-center space-x-2">
-                    </div>
+                        class="absolute bottom-2 left-0 right-0 flex justify-center space-x-2"></div>
                 </div>
             </div>
         </section>
-
 
         <section id="skills" class="section py-20">
             <div class="max-w-4xl mx-auto">
@@ -252,32 +242,98 @@
         <section id="experience" class="section py-20">
             <div class="max-w-4xl mx-auto">
                 <h2 class="text-3xl sm:text-4xl font-bold text-white mb-12 text-center">Experience</h2>
-                <div class="bg-gray-800 p-8 rounded-lg shadow-lg flex flex-col md:flex-row gap-8 items-center mb-12">
-                    <div class="relative w-full md:w-auto md:mr-8" style="max-width: 280px;">
-
-                    </div>
-                    <div>
+                <div class="bg-gray-800 p-8 rounded-lg shadow-lg flex flex-col gap-8 items-start mb-12">
+                    <div class="w-full">
                         <h3 class="text-2xl font-bold text-indigo-400 mb-4">From the Kitchen to the Keyboard: A Chef's
                             Journey</h3>
                         <p class="text-gray-300 mb-4">
-                            For over a decade, my world was the heat of the kitchen, the thrill of a busy service, and
-                            the joy of creating something exceptional from scratch. As a chef, I've led teams in
-                            fast-paced environments like the award-winning Adare Manor and developed new culinary
-                            concepts for the Bakestone Group.
+                            With 20 years as a professional chef, I’ve led teams in high-pressure kitchens like the
+                            award-winning Adare Manor and developed innovative culinary concepts for the Bakestone
+                            Group.
                         </p>
                         <p class="text-gray-300 mb-4">
-                            My experience as a Head Chef and Development Chef taught me more than just how to cook; it
-                            taught me how to lead, how to innovate under pressure, and how to manage complex projects
-                            from concept to completion. The precision required to perfect a recipe is not so different
-                            from the logic needed to write clean code. The creativity of designing a new menu mirrors
-                            the innovation required to build a new application.
+                            My career honed skills in leadership, process optimization, and creative
+                            problem-solving—qualities I now bring to software development. The precision of perfecting a
+                            recipe mirrors writing clean code; designing a menu reflects building applications.
                         </p>
-                        <p class="text-gray-300">
-                            Now, I am channeling that same passion, discipline, and creative energy into a new craft:
-                            software development. I am excited to bring my unique perspective and a well-honed set of
-                            transferable skills to an entry-level position or apprenticeship where I can continue to
-                            learn and grow.
+                        <p class="text-gray-300 mb-6">
+                            Currently, I’m acquiring foundational programming skills and seeking a tech apprenticeship
+                            to contribute my methodical approach and passion for learning to an innovative IT team.
                         </p>
+                        <!-- Image Gallery -->
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                            <div class="relative group">
+                                <a href="images/plating.JPG" data-lightbox="kitchen"
+                                    data-title="Leading team at Adare Manor">
+                                    <img src="images/plating.JPG"
+                                        alt="Black-and-white photo of chef leading team at Adare Manor"
+                                        class="w-full h-40 object-cover rounded-lg border-2 border-gray-200 shadow-md grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300">
+                                    <div
+                                        class="absolute inset-0 bg-gray-900 bg-opacity-75 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-white text-sm rounded-lg">
+                                        Leading team at Adare Manor
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="relative group">
+                                <a href="images/me.jpg" data-lightbox="kitchen"
+                                    data-title="Chef taking a moment at Bakestone">
+                                    <img src="images/me.jpg"
+                                        alt="Black-and-white photo of Chef taking a moment at Bakestone"
+                                        class="w-full h-40 object-cover rounded-lg border-2 border-gray-200 shadow-md grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300">
+                                    <div
+                                        class="absolute inset-0 bg-gray-900 bg-opacity-75 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-white text-sm rounded-lg">
+                                        Chef taking a moment at Bakestone
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="relative group">
+                                <a href="images/award.JPG" data-lightbox="kitchen"
+                                    data-title="Manor team with Irish Restaurant Awards Trophy">
+                                    <img src="images/award.jpg"
+                                        alt="Black-and-white photo of Manor team with Irish Restaurant Awards Trophy"
+                                        class="w-full h-40 object-cover rounded-lg border-2 border-gray-200 shadow-md grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300">
+                                    <div
+                                        class="absolute inset-0 bg-gray-900 bg-opacity-75 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-white text-sm rounded-lg">
+                                        Manor team with Irish Restaurant Awards Trophy
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="relative group">
+                                <a href="images/agnolotti.jpg" data-lightbox="kitchen"
+                                    data-title="Handmade agnolotti at Bakestone">
+                                    <img src="images/agnolotti.jpg" alt="Color photo of Handmade agnolotti at Bakestone"
+                                        class="w-full h-40 object-cover rounded-lg border-2 border-gray-200 shadow-md opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300">
+                                    <div
+                                        class="absolute inset-0 bg-gray-900 bg-opacity-75 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-white text-sm rounded-lg">
+                                        Handmade agnolotti at Bakestone
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="relative group">
+                                <a href="images/kofte.jpg" data-lightbox="kitchen"
+                                    data-title="Kofte with our own lamb and beetroot at O'Looney's">
+                                    <img src="images/kofte.jpg"
+                                        alt="Color photo of Kofte with our own lamb and beetroot at O'Looney's"
+                                        class="w-full h-40 object-cover rounded-lg border-2 border-gray-200 shadow-md opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300">
+                                    <div
+                                        class="absolute inset-0 bg-gray-900 bg-opacity-75 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-white text-sm rounded-lg">
+                                        Kofte with our own lamb and beetroot at O'Looney's
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="relative group">
+                                <a href="images/sriracha.png" data-lightbox="kitchen"
+                                    data-title="Home made smoked sriracha for retail at Bakestone">
+                                    <img src="images/sriracha.png"
+                                        alt="Color photo of Home made smoked sriracha for retail at Bakestone"
+                                        class="w-full h-40 object-cover rounded-lg border-2 border-gray-200 shadow-md opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300">
+                                    <div
+                                        class="absolute inset-0 bg-gray-900 bg-opacity-75 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-white text-sm rounded-lg">
+                                        Home made smoked sriracha for retail at Bakestone
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="bg-gray-800 p-8 rounded-lg shadow-lg">
@@ -319,8 +375,25 @@
                             <span class="block text-gray-200">Adare Manor Hotel, Adare</span>
                             <span class="block text-gray-400">Senior Chef de Partie</span>
                         </li>
+                        <li>
+                            <span class="block text-indigo-400 font-semibold">Early work experience</span>
+                            <span class="block text-gray-200">Firm of Drink Inns, Scotland</span>
+                            <span class="block text-gray-400">Proprietor
+
+                            </span>
+
+                            <span class="block text-gray-400">
+                                Took over running of three public houses following bereavement. Stock control, payroll,
+                                basic accounting, banking, and tax requirements
+                                using
+                                contemporary software
+                                Developed strong organizational and problem-solving skills and proved ability to
+                                self-start
+                            </span>
+                        </li>
                     </ul>
                 </div>
+            </div>
         </section>
 
         <section id="education" class="section py-20">
@@ -346,86 +419,90 @@
                         <p class="text-gray-300">Developed skills in leadership, discipline, problem-solving, and
                             communication under pressure.</p>
                     </div>
+                    <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-bold text-white">Secondary Education</h3>
+                        <p class="text-indigo-400 mb-2">Dollar Academy, Scotland | 1990-1998</p>
+                        <p class="text-gray-300">A-grade Highers (Leaving Cert. equivalent) in English, Maths, Physics,
+                            History, Economics, Management & Information Studies, Accounting & Finance.</p>
+                    </div>
                 </div>
             </div>
         </section>
+    </main>
 
-        <script>
-            // --- Standard Page Interactivity ---
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <script>
+        // --- Standard Page Interactivity ---
+        lucide.createIcons();
 
-            // Lucide Icons
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
+
+        mobileMenuButton.addEventListener('click', () => {
+            const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+            mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
+            mobileMenu.classList.toggle('hidden');
+            const icon = mobileMenuButton.querySelector('i');
+            icon.setAttribute('data-lucide', mobileMenu.classList.contains('hidden') ? 'menu' : 'x');
             lucide.createIcons();
+        });
 
-            // Mobile menu toggle
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
-
-            mobileMenuButton.addEventListener('click', () => {
-                const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
-                mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
-                mobileMenu.classList.toggle('hidden');
-                const icon = mobileMenuButton.querySelector('i');
-                icon.setAttribute('data-lucide', mobileMenu.classList.contains('hidden') ? 'menu' : 'x');
+        mobileMenuLinks.forEach(anchor => {
+            anchor.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenuButton.setAttribute('aria-expanded', 'false');
+                mobileMenuButton.querySelector('i').setAttribute('data-lucide', 'menu');
                 lucide.createIcons();
             });
+        });
 
-            mobileMenuLinks.forEach(anchor => {
-                anchor.addEventListener('click', () => {
-                    mobileMenu.classList.add('hidden');
-                    mobileMenuButton.setAttribute('aria-expanded', 'false');
-                    mobileMenuButton.querySelector('i').setAttribute('data-lucide', 'menu');
-                    lucide.createIcons();
-                });
+        // --- Project Carousel Functionality ---
+        const carousel = document.getElementById('project-carousel');
+        const carouselInner = document.getElementById('carousel-inner');
+        const carouselItems = carouselInner.querySelectorAll('.carousel-item');
+        const prevBtn = document.getElementById('prev-project');
+        const nextBtn = document.getElementById('next-project');
+        const indicatorsContainer = document.getElementById('carousel-indicators');
+
+        let currentIndex = 0;
+
+        // Create indicators
+        carouselItems.forEach((_, idx) => {
+            const indicator = document.createElement('button');
+            indicator.className = 'w-3 h-3 rounded-full bg-gray-500 focus:outline-none' + (idx === 0 ? ' bg-indigo-500' : '');
+            indicator.setAttribute('aria-label', `Go to slide ${idx + 1}`);
+            indicator.addEventListener('click', () => showSlide(idx));
+            indicatorsContainer.appendChild(indicator);
+        });
+
+        function updateIndicators() {
+            indicatorsContainer.querySelectorAll('button').forEach((btn, idx) => {
+                btn.classList.toggle('bg-indigo-500', idx === currentIndex);
+                btn.classList.toggle('bg-gray-500', idx !== currentIndex);
             });
+        }
 
-            // --- Project Carousel Functionality ---
-            const carousel = document.getElementById('project-carousel');
-            const carouselInner = document.getElementById('carousel-inner');
-            const carouselItems = carouselInner.querySelectorAll('.carousel-item');
-            const prevBtn = document.getElementById('prev-project');
-            const nextBtn = document.getElementById('next-project');
-            const indicatorsContainer = document.getElementById('carousel-indicators');
-
-            let currentIndex = 0;
-
-            // Create indicators
-            carouselItems.forEach((_, idx) => {
-                const indicator = document.createElement('button');
-                indicator.className = 'w-3 h-3 rounded-full bg-gray-500 focus:outline-none' + (idx === 0 ? ' bg-indigo-500' : '');
-                indicator.setAttribute('aria-label', `Go to slide ${idx + 1}`);
-                indicator.addEventListener('click', () => showSlide(idx));
-                indicatorsContainer.appendChild(indicator);
+        function showSlide(index) {
+            carouselItems.forEach((item, idx) => {
+                item.classList.toggle('hidden-slide', idx !== index);
             });
+            currentIndex = index;
+            updateIndicators();
+            lucide.createIcons();
+        }
 
-            function updateIndicators() {
-                indicatorsContainer.querySelectorAll('button').forEach((btn, idx) => {
-                    btn.classList.toggle('bg-indigo-500', idx === currentIndex);
-                    btn.classList.toggle('bg-gray-500', idx !== currentIndex);
-                });
-            }
+        prevBtn.addEventListener('click', () => {
+            let newIndex = (currentIndex - 1 + carouselItems.length) % carouselItems.length;
+            showSlide(newIndex);
+        });
 
-            function showSlide(index) {
-                carouselItems.forEach((item, idx) => {
-                    item.classList.toggle('hidden-slide', idx !== index);
-                });
-                currentIndex = index;
-                updateIndicators();
-                lucide.createIcons();
-            }
-
-            prevBtn.addEventListener('click', () => {
-                let newIndex = (currentIndex - 1 + carouselItems.length) % carouselItems.length;
-                showSlide(newIndex);
-            });
-
-            nextBtn.addEventListener('click', () => {
-                let newIndex = (currentIndex + 1) % carouselItems.length;
-                showSlide(newIndex);
-            });
-
-
-        </script>
+        nextBtn.addEventListener('click', () => {
+            let newIndex = (currentIndex + 1) % carouselItems.length;
+            showSlide(newIndex);
+        });
+    </script>
 </body>
 
 </html>
